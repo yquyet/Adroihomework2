@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <style>
+       .btnc{
+        width: 128px;
+       }
+       .btn0{
+        width: 128px;
+       }
+       button{
+           width: 40px;
+       }
+       p{
+           height: 20px;
+       }
+       
+       </style>
+            </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                    <div class="showresult" >
+                            <p></p>
+                            <input id="kq">
+                            <p id="kq2"></p>
+                        </div>
+                        <div class="">
+                            <button class="btnc" onclick="cancel()" id="c">Cancel</button>
+                            <button >/</button>
+                        </div>
+                        <div>
+                            <button onclick="getnumber1()" id="btn1">1</button>
+                            <button onclick="getnumber2()" id="btn2">2</button>
+                            <button onclick="getnumber3()" id="btn3">3</button>
+                            <button id="btnx">x</button>
+                        </div>
+                        <div>
+                            <button onclick="getnumber4()" id="btn4">4</button>
+                            <button onclick="getnumber5()" id="btn5">5</button>
+                            <button onclick="getnumber6()" id="btn6">6</button>
+                            <button id="btn-">-</button>
+                        </div>
+                        <div>
+                            <button onclick="getnumber7()" id="btn7">7</button>
+                            <button onclick="getnumber8()" id="btn8">8</button>
+                            <button onclick="getnumber9()" id="btn9">9</button>
+                            <button onclick="getnumbercong()" id="btn+">+</button>
+                        </div>
+                        <div>
+                            <button class="btn0" id="btn0">0</button>
+                            <button onclick="returnResult()" id="btn=">=</button>
+                        </div>
+            </div>
+        </div>
+        <script>
+             var kq = document.getElementById("kq");
+            function getnumber1 (){
+                    kq.value += "1";
+            }
+            function getnumber2 (){
+                    kq.value += "2";
+            }
+            function getnumber3 (){
+                    kq.value += "3";
+            }
+            function getnumber4 (){
+                    kq.value += "4";
+            }
+            function getnumber5 (){
+                    kq.value += "5";
+            }
+            function getnumber6 (){
+                    kq.value += "6";
+            }
+            function getnumber7 (){
+                    kq.value += "7";
+            }
+            function getnumber8 (){
+                    kq.value += "8";
+            }
+            function getnumber9 (){
+                    kq.value += "9";
+            }
+            function getnumber0 (){
+                    kq.value += "0";
+            }
+
+            function getnumbercong (){
+                var kq = document.getElementById("kq");
+                    kq.value += "+";
+            }
+            
+
+            function returnResult(){
+                var kq = document.getElementById("kq").value;
+                var arr = kq.split("+");
+
+                var sum = 0;
+                 for(var i=0;i < arr.length;i++){
+                     sum += parseInt(arr[i]);
+                 }
+                document.getElementById("kq2").innerHTML=sum;
+            }
+            
+            function cancel(){
+                var kq = document.getElementById("kq");
+                var kq2 = document.getElementById("kq2");
+                    kq.value = " ";
+                    kq2.innerHTML = " ";
+            }
+
+        
+        </script>
+    </body>
+</html>
